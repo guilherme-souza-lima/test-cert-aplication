@@ -87,7 +87,7 @@ for cmd in "${CRITICAL_COMMANDS[@]}"; do
     else
         print_warning "$cmd: não encontrado (será instalado se necessário)"
     fi
-fi
+done
 
 # Verificar se Nginx está rodando
 print_status "Verificando status do Nginx..."
