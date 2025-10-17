@@ -1,0 +1,136 @@
+# Binários compilados do Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+websocket-server
+websocket-wss
+websocket-random-numbers
+
+# Arquivos de teste
+*.test
+*.out
+
+# Cobertura de código
+*.cover
+coverage.txt
+coverage.html
+
+# Arquivos de dependências
+vendor/
+
+# Arquivos de configuração local
+.env
+.env.local
+.env.production
+.env.development
+
+# Logs
+*.log
+logs/
+log/
+
+# Arquivos temporários
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Arquivos do sistema operacional
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# Arquivos de backup
+*.bak
+*.backup
+*.old
+
+# Arquivos de certificados SSL (não devem ser commitados)
+*.pem
+*.key
+*.crt
+*.csr
+ssl/
+certs/
+certificates/
+
+# Arquivos de Docker
+docker-compose.override.yml
+
+# Arquivos de build
+build/
+dist/
+bin/
+
+# Arquivos de cache
+.cache/
+*.cache
+
+# Arquivos de configuração específicos do ambiente
+config.local.json
+config.production.json
+config.development.json
+
+# Arquivos de banco de dados
+*.db
+*.sqlite
+*.sqlite3
+
+# Arquivos de monitoramento
+*.pid
+*.seed
+*.pid.lock
+
+# Arquivos de análise de código
+.nyc_output/
+coverage/
+
+# Arquivos de documentação gerada
+docs/build/
+site/
+
+# Arquivos de deploy
+deploy.log
+deployment.log
+
+# Arquivos de backup do sistema
+*.orig
+*.rej
+
+# Arquivos de configuração do editor
+.editorconfig
+
+# Arquivos de configuração do Docker local
+docker-compose.local.yml
+
+# Arquivos de configuração específicos do servidor
+server-config/
+production-config/
+
+# Arquivos de logs do Docker
+docker.log
+container.log
+
+# Arquivos de monitoramento
+monitoring/
+metrics/
+
+# Arquivos de backup de certificados
+ssl-backup-*.tar.gz
+cert-backup-*.tar.gz

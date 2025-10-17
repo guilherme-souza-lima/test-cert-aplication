@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  websocket-wss:
+    build: .
+    container_name: websocket-wss-server
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMAIN=cubevisservice.site
+    volumes:
+      # Certificados SSL do Let's Encrypt
+      - /etc/letsencrypt/live/cubevisservice.site:/etc/letsencrypt/live/cubevisservice.site:ro
+      - /etc/letsencrypt/archive/cubevisservice.site:/etc/letsencrypt/archive/cubevisservice.site:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "https://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - websocket-network
+
+networks:
+  websocket-network:
+    driver: bridge

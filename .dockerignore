@@ -1,0 +1,44 @@
+# Arquivos e diretórios a serem ignorados no build do Docker
+
+# Arquivos de desenvolvimento
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# Diretórios de build
+bin/
+dist/
+build/
+
+# Arquivos de IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de teste
+*_test.go
+test/
+
+# Documentação desnecessária para o container
+guia-certificado-ssl.md
+setup_wss.sh
+README.md
+
+# Arquivos de configuração local
+.env
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+
+# Arquivos temporários
+tmp/
+temp/
