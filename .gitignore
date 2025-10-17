@@ -134,3 +134,11 @@ metrics/
 # Arquivos de backup de certificados
 ssl-backup-*.tar.gz
 cert-backup-*.tar.gz
+
+# Diretórios de build específicos
+local/websocket-local
+wss/websocket-wss
+
+# Arquivos de configuração específicos do ambiente
+local/.env
+wss/.env

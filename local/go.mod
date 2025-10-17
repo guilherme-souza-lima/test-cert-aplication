@@ -1,4 +1,4 @@
-module websocket-wss-project
+module websocket-local
 
 go 1.21
 

@@ -51,13 +51,15 @@ docker-compose -f docker-compose.prod.yml up -d
 
 ### Versão Local (HTTP/WS)
 
-1. Instale as dependências:
+1. Execute o servidor local:
 ```bash
-go mod tidy
+./run-local.sh
 ```
 
-2. Execute o servidor:
+2. Ou execute manualmente:
 ```bash
+cd local
+go mod tidy
 go run main.go
 ```
 
@@ -76,6 +78,13 @@ sudo ./setup_wss.sh
 
 3. **Execute o servidor WSS**:
 ```bash
+./run-wss.sh
+```
+
+Ou execute manualmente:
+```bash
+cd wss
+go mod tidy
 go run wss_server.go
 ```
 
@@ -107,11 +116,13 @@ go run wss_server.go
 
 **Para versão local:**
 ```bash
+cd local
 go run client.go
 ```
 
 **Para versão segura:**
 ```bash
+cd wss
 go run wss_client.go
 ```
 
@@ -120,10 +131,10 @@ Os clientes irão conectar ao servidor e exibir os números aleatórios recebido
 ## Estrutura do projeto
 
 ### 📁 Arquivos Principais
-- `main.go` - Servidor WebSocket local (HTTP/WS) - Porta 5678
-- `wss_server.go` - Servidor WebSocket seguro (HTTPS/WSS)
-- `client.go` - Cliente de teste para versão local
-- `wss_client.go` - Cliente de teste para versão segura
+- `local/main.go` - Servidor WebSocket local (HTTP/WS) - Porta 5678
+- `wss/wss_server.go` - Servidor WebSocket seguro (HTTPS/WSS)
+- `local/client.go` - Cliente de teste para versão local
+- `wss/wss_client.go` - Cliente de teste para versão segura
 
 ### 🐳 Docker
 - `Dockerfile` - Configuração do container Docker (WSS)

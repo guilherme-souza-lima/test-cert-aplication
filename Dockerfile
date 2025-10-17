@@ -16,9 +16,8 @@ COPY go.mod go.sum ./
 # Baixar dependências
 RUN go mod download
 
-# Copiar código fonte
-COPY wss_server.go ./
-COPY wss_client.go ./
+# Copiar código fonte WSS
+COPY wss/ ./
 
 # Compilar aplicação WSS
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o websocket-wss wss_server.go
